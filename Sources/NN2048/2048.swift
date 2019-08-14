@@ -339,9 +339,6 @@ func monteCarloSearch(state: Game2048) -> Game2048.Direction {
     func performRollout(state: Game2048, direction: Game2048.Direction) -> Double {
         var newState = state.copy()
         newState.play(direction: direction)
-/*        if newState.gameWon {
-            return .infinity
-        }*/
         while !newState.gameOver {
             newState.play(direction: newState.validDirections.randomElement()!)
         }

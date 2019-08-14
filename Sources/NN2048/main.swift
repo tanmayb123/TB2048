@@ -14,20 +14,3 @@ router.get("/analyze") { request, response, next in
 
 Kitura.addHTTPServer(onPort: 8080, with: router)
 Kitura.run()
-
-/*var wins = 0
-for i in 1...500 {
-    if i % 10 == 0 {
-        print(i)
-    }
-    var state = Game2048()
-    while !state.gameOver {
-        state.play(direction: monteCarloSearch(state: state))
-    }
-    if state.gameWon {
-        print("won")
-    } else {
-        print("lost")
-    }
-}
-print("Wins: \(wins)")*/
